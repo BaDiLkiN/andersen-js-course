@@ -15,16 +15,15 @@
  * generator.next(); -> 'Complete!'
  * generator.next(); -> 'Complete!'
  */
-const createGenerator = (arr) => {
-    let count = 0;
-    return () => {
-        const val = arr[count];
-        if (val) {
-            count += 1;
-            return val;
-        } else {
-            return 'Complete!'
-        }
+export const createGenerator = arr => {
+  let count = 0;
+  return () => {
+    const val = arr[count];
+    if (val) {
+      count += 1;
+      return val;
+    } else {
+      return 'Complete!';
     }
-}
-export const generator = createGenerator([1, '6', 3, 2]);
+  };
+};

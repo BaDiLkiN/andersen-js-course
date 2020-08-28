@@ -16,19 +16,17 @@
  */
 
 export function any(arr, cb) {
-    if (cb) {
-        return arr.some(cb)
+  if (cb) {
+    return arr.some(cb);
+  }
+  let result;
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i]) {
+      result = !!arr[i];
+      break;
+    } else {
+      result = false;
     }
-    let result;
-    for (let i = 0; i < arr.length; i++) {
-        if (arr[i]) {
-            result = !!arr[i];
-            break;
-        }
-        else {
-            result = false;
-        }
-    }
-    return result;
+  }
+  return result;
 }
-

@@ -16,13 +16,12 @@
  * console.log(arrayDiff([1, 3, 3, 4], [1, 3, '4'])); -> [4, '4']
  */
 
-
 export function arrayDiff(arr1, arr2) {
-    const result = [];
-    for (let i; i < arr1.length; i++) {
-        if (!arr2.includes(arr1[i])) {
-            result.push(arr1[i])
-        }
+  const result = [];
+  for (let i; i < arr1.length; i++) {
+    if (!arr2.includes(arr1[i])) {
+      result.push(arr1[i]);
     }
-    return result;
+  }
+  return result;
 }

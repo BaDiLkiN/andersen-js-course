@@ -11,15 +11,15 @@
 // Раскомментировать нижнее, при начале реализации
 
 export const meetups = [
-    { name: 'JavaScript', isActive: true, members: 100 },
-    { name: 'Angular', isActive: true, members: 900 },
-    { name: 'Node', isActive: false, members: 600 },
-    { name: 'React', isActive: true, members: 500 },
+  { name: 'JavaScript', isActive: true, members: 100 },
+  { name: 'Angular', isActive: true, members: 900 },
+  { name: 'Node', isActive: false, members: 600 },
+  { name: 'React', isActive: true, members: 500 },
 ];
 
-export const membersOnActiveMeetups = (meetups) => {
-    const activeMeetups = meetups.filter(({ isActive = true }) => {
-        return isActive;
-    });
-    return activeMeetups.reduce((acc, { members }) => acc + members, 0);
-}
+export const membersOnActiveMeetups = meetups => {
+  const activeMeetups = meetups.filter(({ isActive }) => {
+    return isActive;
+  });
+  return activeMeetups.reduce((acc, { members }) => acc + members, 0);
+};

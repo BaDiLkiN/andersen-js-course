@@ -36,7 +36,7 @@ import { any } from './array-practice/task1';
 import { arrayDiff } from './array-practice/task2';
 import { forEachRight } from './array-practice/task3';
 import { union } from './array-practice/task4';
-import { generator } from './array-practice/task5';
+import { createGenerator } from './array-practice/task5';
 import { transformArrayToNumber } from './array-practice/task6';
 import { take } from './array-practice/task7';
 import { without } from './array-practice/task8';
@@ -109,11 +109,11 @@ console.log(union([5, 1, 3, 3, 4], [1, 3, 4]));
 
 console.log('=============arr5');
 
-generator();
-generator();
-generator();
-generator();
-generator();
+createGenerator();
+createGenerator();
+createGenerator();
+createGenerator();
+createGenerator();
 
 console.log('=============arr6');
 
