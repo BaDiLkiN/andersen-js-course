@@ -32,11 +32,17 @@ import { task9Old, task9New } from './es-features/task9';
 // import { task14Old, task14New } from './es-features/task14';
 // import { task15Old, task15New } from './es-features/task15';
 
-
 import { any } from './array-practice/task1';
 import { arrayDiff } from './array-practice/task2';
 import { forEachRight } from './array-practice/task3';
 import { union } from './array-practice/task4';
+import { generator } from './array-practice/task5';
+import { transformArrayToNumber } from './array-practice/task6';
+import { take } from './array-practice/task7';
+import { without } from './array-practice/task8';
+import { indexOfAll } from './array-practice/task9';
+import { meetups } from './array-practice/task10';
+import { membersOnActiveMeetups } from './array-practice/task10';
 
 console.log('task1 old', task1Old(10) === 500); // true
 console.log('task1 new', task1New(10) === 500); // true
@@ -81,23 +87,62 @@ console.log('=============');
 console.log('task9 old', task9Old()); // [true, 1]
 console.log('task9 new', task9New()); // [true, 1]
 
-console.log('=============');
+console.log('=============arr1');
 
-console.log('any', console.log(any([0, 0, 1, 0])), console.log(any([0, 0, 1, 0])), console.log(any([0, 0, 0, 0])));
+console.log(any([0, 0, 1, 0]));
+console.log(any([0, 0, 1, 0]));
+console.log(any([0, 0, 0, 0]));
 
-console.log('=============');
+console.log('=============arr2');
 
-console.log('arrayDiff', console.log(arrayDiff([1, 2, 3], [1, 2, 4])), console.log(arrayDiff([1, 3, 3, 4], [1, 3, '4'])));
+console.log(arrayDiff([1, 2, 3], [1, 2, 4]));
+console.log(arrayDiff([1, 3, 3, 4], [1, 3, '4']));
 
-console.log('=============');
+console.log('=============arr3');
 
-console.log('forEachRight', console.log(forEachRight([1, 2, 3, 4], val => console.log(val))));
+console.log(forEachRight([1, 2, 3, 4], val => console.log(val)));
 
-console.log('=============');
+console.log('=============arr4');
 
-console.log('union', console.log(union([5, 1, 2, 3, 3], [4, 3, 2])));
+console.log(union([5, 1, 2, 3, 3], [4, 3, 2]));
+console.log(union([5, 1, 3, 3, 4], [1, 3, 4]));
 
-console.log('=============');
+console.log('=============arr5');
+
+generator();
+generator();
+generator();
+generator();
+generator();
+
+console.log('=============arr6');
+
+console.log(transformArrayToNumber([10, 20, 30], (acc, item) => acc + item));
+console.log(transformArrayToNumber([10, 20, 30], (acc, item) => acc + item, 10));
+console.log(transformArrayToNumber([10, 20, 30], (acc, item) => acc * item));
+console.log(transformArrayToNumber([10, 20, 30], (acc, item) => acc * item, 1));
+console.log(transformArrayToNumber([10, 20, 30], (acc, item) => acc - item));
+
+console.log('=============arr7');
+
+console.log(take([1, 2, 3], 5));
+console.log(take([1, 2, 3], 2));
+
+console.log('=============arr8');
+
+console.log(without([2, 1, 2, 3], 1, 2));
+console.log(without([2, 1, 10, 20], 1, 2));
+
+console.log('=============arr9');
+
+console.log(indexOfAll([1, 2, 3, 1, 2, 3], 1));
+console.log(indexOfAll([1, 2, 3], 4));
+
+console.log('=============arr10');
+
+membersOnActiveMeetups(meetups);
+
+console.log('==================');
 
 // console.log('task10 old', task10Old()); // {name: 'Max', age: 12, color: red}
 // console.log('task10 new', task10New()); // {name: 'Max', age: 12, color: red}

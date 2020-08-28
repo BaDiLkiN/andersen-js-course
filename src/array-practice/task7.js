@@ -12,7 +12,7 @@
  * console.log(take([1, 2, 3], 2)); -> [1, 2]
  */
 
-export const take = (arr, val) => {
+export const take = (arr, val = 0) => {
     arr.slice(val);
     return arr;
 }

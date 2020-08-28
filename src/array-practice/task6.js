@@ -22,17 +22,6 @@
  */
 
 export const transformArrayToNumber = (arr, cb, item = 0) => {
-    return arr.reduce((acc, item) = {
-
-    })
-
+    return arr.reduce(cb, item)
 }
 
-// const without = (arr, ...restArgs) => {
-//     return arr.reduce((acc, item) => {
-//         if (restArgs.includes(item)) {
-//             return acc;
-//         }
-//         acc.push(item);
-//         return acc;
-//     }, []);

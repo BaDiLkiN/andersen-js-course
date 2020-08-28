@@ -29,16 +29,14 @@ export function task6Old() {
 // При желании, можете использовать стрелочную функцию, вместо обычной
 
 export function task6New() {
-  // function userModule() {
-  //   return {
-  //     name: 'Max',
-  //     value: 100,
-  //     role: { name: 'Admin' },
-  //     cases: [{ id: '1' }],
-  //   };
-  // }
-  // let tmp = userModule;
-  // const { name, value, role: { name: roleName }, cases: [{ id }] } = tmp;
-  // return [tmp]
+  function userModule() {
+    return {
+      name: 'Max',
+      value: 100,
+      role: { name: 'Admin' },
+      cases: [{ id: '1' }],
+    };
+  }
+  const { name, value, role: { name: roleName }, isActive = false, cases: [{ id }] } = userModule();
+  return [name, value, roleName, isActive, id]
 }
-//const { name, value, role: { name: roleName } } = tmp;

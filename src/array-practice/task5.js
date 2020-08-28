@@ -15,7 +15,7 @@
  * generator.next(); -> 'Complete!'
  * generator.next(); -> 'Complete!'
  */
-export const createGenerator = (arr) => {
+const createGenerator = (arr) => {
     let count = 0;
     return () => {
         const val = arr[count];
@@ -27,3 +27,4 @@ export const createGenerator = (arr) => {
         }
     }
 }
+export const generator = createGenerator([1, '6', 3, 2]);
