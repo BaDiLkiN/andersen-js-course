@@ -18,3 +18,9 @@
 // ];
 
 // function membersOnActiveMeetups(meetups) {}
+export const membersOnActiveMeetups = (meetUps) => {
+    const activeMeetups = meetUps.filter(({ isActive }) => {
+        return isActive;
+    });
+    return activeMeetups.reduce((acc, { members }) => acc + members, 0);
+}

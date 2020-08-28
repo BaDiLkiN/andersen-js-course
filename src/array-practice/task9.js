@@ -10,3 +10,12 @@
  * console.log(indexOfAll([1, 2, 3, 1, 2, 3], 1)); -> [0, 3]
  * console.log(indexOfAll([1, 2, 3], 4)); -> []
  */
+export const indexOfAll = (arr, num) => {
+    return arr.reduce((acc, item, index) => {
+        if (num !== item) {
+            return acc;
+        }
+        acc.push(index);
+        return acc;
+    }, [])
+}

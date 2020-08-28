@@ -11,3 +11,12 @@
  * console.log(without([2, 1, 2, 3], 1, 2)) -> [3]
  * console.log(without([2, 1, 10, 20], 1, 2)) -> [10, 20]
  */
+export const without = (arr, ...restArgs) => {
+    return arr.reduce((acc, item) => {
+        if (restArgs.includes(item)) {
+            return acc;
+        }
+        acc.push(item);
+        return acc;
+    }, [])
+}

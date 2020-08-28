@@ -14,3 +14,21 @@
  * console.log(any([0, 0, 1, 0])); -> true
  * console.log(any([0, 0, 0, 0])); -> false
  */
+
+export function any(arr, cb) {
+    if (cb) {
+        return arr.some(cb)
+    }
+    let result;
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i]) {
+            result = !!arr[i];
+            break;
+        }
+        else {
+            result = false;
+        }
+    }
+    return result;
+}
+
